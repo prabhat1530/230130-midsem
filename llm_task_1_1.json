@@ -1,0 +1,67 @@
+{
+  "student_metadata": {
+    "name": "Student",
+    "roll_number": "23NST045",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-10",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 1.1",
+      "purpose": "Understand the three-stage update pipeline in Algorithm 1",
+      "prompt": "Can you help me trace through Algorithm 1 of the TC-GMM paper step by step, particularly how the fixed-complexity update in Eq 7-8 connects to the model splitting in Eq 9-10?",
+      "llm_response_used": "Partially",
+      "code_used_verbatim": false,
+      "how_it_helped": "Helped me see that the E_i terms in Eq 7 are the link between stages \u2014 they're reused in Eq 9 for the difference component.",
+      "student_verification": "Cross-referenced Eq 3 and Eq 7 from the paper to confirm E_i = sum_j p(i|x_j).",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 1.1",
+      "purpose": "Understand why Historical GMM enables dynamic complexity",
+      "prompt": "Why can't a single new data point ever justify increasing the number of Gaussian components in an incremental GMM? What does the Historical GMM solve?",
+      "llm_response_used": "Yes",
+      "code_used_verbatim": false,
+      "how_it_helped": "Clarified the information-theoretic argument: one point adds O(1) evidence but complexity increases by O(D^2) parameters.",
+      "student_verification": "Verified against Section 1 problem challenges paragraph in the paper.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "Why can't a single new data point ever justify increasing the number of Gaussian components in an incremental GMM? What does the Historical GMM solve?",
+      "why_important": "Directly unlocked my understanding of the paper's core motivation \u2014 without this I could not have written the step 3 explanation."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "Can you help me trace through Algorithm 1 of the TC-GMM paper step by step...",
+      "why_important": "Helped me organise the step-by-step description and correctly identify that E_i is the memory-efficient sufficient statistic."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B.",
+    "understanding_acknowledged": true,
+    "signature": "Student",
+    "date": "2026-03-11"
+  }
+}

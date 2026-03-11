@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Student",
+    "roll_number": "23NST045",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-11",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 3.1 Component 1",
+      "purpose": "Decide which two components to ablate",
+      "prompt": "For TC-GMM, if I have to ablate two distinct components of the method, what are the two most informative things to remove? I'm thinking: (1) the Historical GMM / model order selection, and (2) temporal coherence of data order. Are these distinct enough?",
+      "llm_response_used": "Partially",
+      "code_used_verbatim": false,
+      "how_it_helped": "Confirmed these are independent components (one is algorithmic, one is a data assumption) and suggested the shuffling trick for ablation 2.",
+      "student_verification": "Verified they are covered in separate sections of the paper (2.3 vs 2.1) and represent independent design choices.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "For TC-GMM, if I have to ablate two distinct components...",
+      "why_important": "Helped me confirm that removing temporal ordering (by shuffling) is a valid ablation of the TC assumption rather than a data artefact."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B.",
+    "understanding_acknowledged": true,
+    "signature": "Student",
+    "date": "2026-03-11"
+  }
+}

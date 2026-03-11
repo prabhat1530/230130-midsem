@@ -1,0 +1,67 @@
+{
+  "student_metadata": {
+    "name": "Student",
+    "roll_number": "23NST045",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-10",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 2.2",
+      "purpose": "Debug the covariance update Eq 8",
+      "prompt": "I'm implementing Eq 8 of the TC-GMM paper for the covariance update. The result keeps becoming non-positive-definite. The equation is: C*_i = [(C_i + mu_i mu_i^T - mu_i mu*_i^T - mu*_i mu_i^T + mu*_i mu*_i^T) E_i + (x - mu*_i)(x-mu*_i)^T p(i|x)] / (E_i + p(i|x)). What could cause numerical instability?",
+      "llm_response_used": "Yes",
+      "code_used_verbatim": false,
+      "how_it_helped": "Identified that adding eps*I regularisation to C before inversion is standard practice and prevents det(C)\u22480 failures.",
+      "student_verification": "Tested with and without eps regularisation; confirmed that 1e-5*I stabilises all operations.",
+      "confidence_level": 4
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-10",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 2.2",
+      "purpose": "Understand Bhattacharyya distance integral",
+      "prompt": "Eq 14 of the paper defines the Bhattacharyya integral between two Gaussians as \u222b p_i(x) p_j(x) dx. Can you derive what this equals in closed form for two multivariate Gaussians?",
+      "llm_response_used": "Yes",
+      "code_used_verbatim": false,
+      "how_it_helped": "Derived the closed-form expression with det and K terms, which I then verified against Eq 14 in the paper.",
+      "student_verification": "Cross-checked all variables C, mu, K against paper's Eq 14 notation.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 2,
+      "prompt": "Eq 14 of the paper defines the Bhattacharyya integral...",
+      "why_important": "Correctly deriving the Bhattacharyya distance was essential for the MDL merging criterion \u2014 without this Task 2 and Task 3 would not work."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 1,
+      "prompt": "I'm implementing Eq 8 of the TC-GMM paper...",
+      "why_important": "Resolving the numerical instability issue was the biggest implementation challenge."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B.",
+    "understanding_acknowledged": true,
+    "signature": "Student",
+    "date": "2026-03-11"
+  }
+}

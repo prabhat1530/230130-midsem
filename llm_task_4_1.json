@@ -1,0 +1,47 @@
+{
+  "student_metadata": {
+    "name": "Student",
+    "roll_number": "23NST045",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part B",
+    "submission_date": "2026-03-11"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "provider": "Anthropic"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-11",
+      "tool_name": "Claude",
+      "model": "claude-sonnet-4-6",
+      "task_tag": "Task 4.1",
+      "purpose": "Structure the report within 4 pages",
+      "prompt": "I need to write a 4-page maximum report covering: paper summary, reproduction result and gap, two ablations, failure mode, and honest reflection. What's an efficient section structure?",
+      "llm_response_used": "Partially",
+      "code_used_verbatim": false,
+      "how_it_helped": "Suggested a 5-section structure that maps directly to the marking rubric, saving space by combining ablation interpretation.",
+      "student_verification": "Checked against Part B rubric Task 4.1 to ensure all 5 graded components are covered.",
+      "confidence_level": 4
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "I need to write a 4-page maximum report covering...",
+      "why_important": "Helped plan the report structure efficiently to cover all graded items within the 4-page limit."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B.",
+    "understanding_acknowledged": true,
+    "signature": "Student",
+    "date": "2026-03-11"
+  }
+}
